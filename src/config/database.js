@@ -4,8 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const env = process.env;
 
-console.log(env.DB_DATABASE, env.DB_USERNAME, env.DB_PASSWORD, env.HOST);
-
 // Create a Sequelize instance, connecting to the MySQL database
 const sequelize = new Sequelize(env.DB_DATABASE, env.DB_USERNAME, null, {
     host: env.DB_HOST || 'localhost',
